@@ -1,0 +1,22 @@
+id: 5e105d24-bf44-4bbd-92b4-729cb7d4f23a
+timestamp: 2023-06-17T15:37:26Z
+username: jsheth
+source: TanzuCLI
+accelerator:
+  name: tanzu-java-web-app
+  source:
+    image: harbor.aws.tanzuapps.org/tap/tap-packages@sha256:0310128e62ade8150fbfa9fd82e826d98d4311a17b97ba5cb2bdab1ffc25d7d9
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: harbor.aws.tanzuapps.org/tap/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: java-version
+    source:
+      image: harbor.aws.tanzuapps.org/tap/tap-packages@sha256:fa976ccf1609cb69e74a0162f0f49581fd0d393003e2fbe5d54d12eae62b4ff9
+  - name: tap-workload
+    source:
+      image: harbor.aws.tanzuapps.org/tap/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  includeKubernetes: true
+  projectName: service-tanzu-java-web-app
+  repositoryPrefix: harbor.aws.tanzuapps.org/workloads
